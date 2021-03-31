@@ -13,9 +13,9 @@ def handleBtnPress(btn):
         13: "Hope you liked it.",
         19: "Goodbye"
     }
-
-     msg = switcher.get(btn.pin.number, "Error")
-     print(msg)
+    
+    msg = switcher.get(btn.pin.number, "Error")
+    print(msg)
 
 key1 = Button(5)
 key2 = Button(6)
