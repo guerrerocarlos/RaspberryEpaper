@@ -2,7 +2,7 @@ from gpiozero import Button
 from signal import pause
 
 def say_hello(button_number):
-    print("Button: " + button_number)
+    print("Button: " + str(button_number))
 
 key1 = Button(5)
 key2 = Button(6)
