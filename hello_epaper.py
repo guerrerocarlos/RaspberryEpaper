@@ -1,4 +1,5 @@
 import sys                                    # import sys
+picdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'pic')
 libdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'lib')
 if os.path.exists(libdir):
     sys.path.append(libdir)                 # add the lib folder to sys so python can find the libraries
@@ -29,8 +30,8 @@ def printToDisplay(string):
 
     # create a draw object and the font object we will use for the display
     draw = ImageDraw.Draw(HBlackImage)
-    font = ImageFont.truetype('/usr/share/fonts/truetype/google/Bangers-Regular.ttf', 30)
-
+    font = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
+    
     # draw the text to the display. First argument is starting location of the text in pixels
     draw.text((25, 65), string, font = font, fill = 0)
     
