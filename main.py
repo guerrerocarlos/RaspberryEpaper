@@ -33,7 +33,7 @@ def handleButton(button):
         clearScreen()
     elif button.pin == 6:
         print("Colour image...")
-        colourScreen():
+        colourScreen()
     else:
         def exitProgram():
 
