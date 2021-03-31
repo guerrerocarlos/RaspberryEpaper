@@ -11,10 +11,11 @@ import time
 from gpiozero import Button
 from signal import pause
 
+epd = epd2in7b.EPD()
+epd.init()
+epd.Clear()
+
 def clearScreen():
-    epd = epd2in7b.EPD()
-    epd.init()
-    epd.Clear()
     time.sleep(1)
 
 def colourScreen():
@@ -35,7 +36,7 @@ def handleButton(button):
         print("Colour image...")
         colourScreen()
     else:
-        def exitProgram():
+        exitProgram()
 
 key1 = Button(5)
 key2 = Button(6)
