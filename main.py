@@ -11,6 +11,7 @@ import time
 from gpiozero import Button
 from signal import pause
 
+GPIO.setmode(GPIO.BOARD)
 epd = epd2in7b.EPD()
 epd.init()
 
