@@ -11,6 +11,11 @@ import time
 from gpiozero import Button
 from signal import pause
 
+key1 = Button(5)
+key2 = Button(6)
+key3 = Button(13)
+key4 = Button(19)
+
 epd = epd2in7b.EPD()
 epd.init()
 
@@ -32,12 +37,6 @@ def colourScreen():
     epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRedimage))
     time.sleep(2)
 
-
-
-key1 = Button(5)
-key2 = Button(6)
-key3 = Button(13)
-key4 = Button(19)
 
 key1.when_pressed = handleButton
 key2.when_pressed = handleButton
