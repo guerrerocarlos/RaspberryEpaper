@@ -27,7 +27,7 @@ def exitProgram():
     epd.sleep()
     sys.exit()
 
-def handleButton(button)
+def handleButton(button):
     if button.pin == 5:
         print("Clearing screen..")
         clearScreen()
