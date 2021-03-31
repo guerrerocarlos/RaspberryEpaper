@@ -37,7 +37,7 @@ def colourScreen():
 
 def exitProgram():
     epd.sleep()
-    sys.exit()
+    sys.exit
 
 
 
