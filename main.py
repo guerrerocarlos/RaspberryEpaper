@@ -14,7 +14,7 @@ epd.init()
 epd.Clear()
 time.sleep(1)
 
-HBlackimage = Image.open(os.path.join(picdir, '2in7_Scale.bmp'))
+HBlackimage = Image.open(os.path.join(picdir, '2in7b-b.bmp'))
 HRedimage = Image.open(os.path.join(picdir, '2in7b-r.bmp'))
 epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRedimage))
 time.sleep(2)
