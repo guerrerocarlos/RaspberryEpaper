@@ -11,7 +11,6 @@ import time
 from gpiozero import Button
 from signal import pause
 
-GPIO.setmode(GPIO.BOARD)
 epd = epd2in7b.EPD()
 epd.init()
 
@@ -22,8 +21,6 @@ def handleButton(button):
     elif button.pin == 6:
         print("Colour image...")
         colourScreen()
-    else:
-        exitProgram()
 
 def clearScreen():
     epd.Clear()
@@ -34,10 +31,6 @@ def colourScreen():
     HRedimage = Image.open(os.path.join(picdir, '2in7b-r.bmp'))
     epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRedimage))
     time.sleep(2)
-
-def exitProgram():
-    epd.sleep()
-    sys.exit
 
 
 
