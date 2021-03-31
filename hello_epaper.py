@@ -1,10 +1,11 @@
-import sys                                    # import sys
+import sys 
+import os                                   # import sys
 picdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'pic')
 libdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'lib')
 if os.path.exists(libdir):
     sys.path.append(libdir)                 # add the lib folder to sys so python can find the libraries
 
-import epd2in7b                               # import the display drivers
+from waveshare_epd import epd2in7b                          # import the display drivers
 from PIL import Image,ImageDraw,ImageFont     # import the image libraries
 import time                                      
 from gpiozero import Button                   # import the Button control from gpiozero
