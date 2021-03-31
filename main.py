@@ -13,9 +13,19 @@ from signal import pause
 
 epd = epd2in7b.EPD()
 epd.init()
-epd.Clear()
+
+def handleButton(button):
+    if button.pin == 5:
+        print("Clearing screen..")
+        clearScreen()
+    elif button.pin == 6:
+        print("Colour image...")
+        colourScreen()
+    else:
+        exitProgram()
 
 def clearScreen():
+    epd.Clear()
     time.sleep(1)
 
 def colourScreen():
@@ -28,15 +38,7 @@ def exitProgram():
     epd.sleep()
     sys.exit()
 
-def handleButton(button):
-    if button.pin == 5:
-        print("Clearing screen..")
-        clearScreen()
-    elif button.pin == 6:
-        print("Colour image...")
-        colourScreen()
-    else:
-        exitProgram()
+
 
 key1 = Button(5)
 key2 = Button(6)
