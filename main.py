@@ -5,7 +5,7 @@ libdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'lib')
 if os.path.exists(libdir):
     sys.path.append(libdir)
 
-from waveshare_epd import epd2in7b
+from waveshare_epd import epd2in7
 from PIL import Image
 import time
 from gpiozero import Button
@@ -16,8 +16,10 @@ key2 = Button(6)
 key3 = Button(13)
 key4 = Button(19)
 
-epd = epd2in7b.EPD()
+epd = epd2in7.EPD()
 epd.init()
+
+print("RUN!..")
 
 def handleButton(button):
     if button.pin == 5:
